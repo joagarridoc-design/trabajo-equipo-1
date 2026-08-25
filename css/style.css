@@ -3,6 +3,10 @@ body{
     background-image: url(../img/fondo.jpg);
     background-size: cover;
 }
+.card{
+    background-color: rgb(214, 174, 99);
+
+}
 
 h1{
     color: rgb(248, 243, 198);
