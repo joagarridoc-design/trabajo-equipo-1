@@ -48,6 +48,40 @@
     </div>
   </div>
 </nav>
+<h1>Detección Mundial de Brainrot</h1>
+  <div class="contador-box">
+    Apariciones detectadas: <span id="contador">0</span>
+  </div>
+  <div class="incremento" id="alerta"></div>
+<script>
+    
+    let totalBrainrot = 1000000; 
+    const elementoContador = document.getElementById('contador');
+    const elementoAlerta = document.getElementById('alerta');
+
+
+    function generarBrainrotAleatorio() {
+ 
+      const nuevosCasos = Math.floor(Math.random() * 20) + 1;
+      
+    
+      totalBrainrot += nuevosCasos;
+
+
+      elementoContador.textContent = totalBrainrot.toLocaleString(); 
+      elementoAlerta.textContent = `+${nuevosCasos} nuevos casos en el mundo`;
+
+      
+      setTimeout(() => {
+        elementoAlerta.textContent = '';
+      }, 1000);
+    }
+    generarBrainrotAleatorio();
+    setInterval(generarBrainrotAleatorio, 2500);
+  </script>
+  </p>
+  <img src="IMG/WARNING.gif" alt="">
+  <img src="img/2535664_b3774.gif" alt="">
     
 </body>
 </html>
